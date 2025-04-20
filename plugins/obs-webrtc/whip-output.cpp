@@ -178,7 +178,7 @@ void WHIPOutput::ConfigureVideoTrack(std::string media_stream_id, std::string cn
 
 	if (video_bitrate != 0) {
 		packetizer->addToChain(std::make_shared<rtc::PacingHandler>(static_cast<double>(video_bitrate * 10000),
-									    std::chrono::milliseconds(2)));
+									    std::chrono::milliseconds(1)));
 	}
 
 	video_track = peer_connection->addTrack(video_description);
