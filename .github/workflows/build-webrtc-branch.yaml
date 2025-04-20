@@ -1,0 +1,15 @@
+name: Build webrtc-pacing-handler branch
+run-name: Build webrtc-pacing-handler 🚀
+
+on:
+  push:
+    branches:
+      - webrtc-pacing-handler # 
+
+jobs:
+  build:
+    name: Build Project 🧱
+    uses: ./.github/workflows/build-project.yaml 
+    secrets: inherit
+    permissions:
+       contents: read
